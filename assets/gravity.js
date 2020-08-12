@@ -44,14 +44,14 @@ const frame = [ttop, left, right, bottom];
 
 const rnd = (from, to) => Math.random() * (to - from) + from;
 const rr = Math.round((window.innerWidth * window.innerHeight) / 3700);
-const res = Math.max(Math.min(rr, 500), 50);
+const res = Math.max(Math.min(rr, 100), 50);
 const bodies = [];
 for (let i = 0; i < res; i++) {
   const x = rnd(0, w);
   const y = rnd(h * 0.50, h * 0.50);
   let xx = rnd(1, 50);
   let yy = rnd(1, 50);
-  if (Math.random() > 1 / Math.PI) {
+  if (Math.random() > 0.9) {
     xx = rnd(1, 100);
     yy = rnd(1, 100);
   }
